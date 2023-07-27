@@ -1,7 +1,7 @@
 import { Heading, VStack, Text, Img, Button } from '@chakra-ui/react';
 import React from 'react';
 
-const ProductCard = ({ image, price, title, handler }) => {
+const ProductCard = ({ id, image, price, title, handler }) => {
   return (
     <VStack
       w={'300px'}
@@ -28,7 +28,7 @@ const ProductCard = ({ image, price, title, handler }) => {
       </Text>
       <Button
         colorScheme={'orange'}
-        onClick={handler({ title, price, image, qty: 1 })}
+        onClick={() => handler({ id, title, price, image, qty: 1 })}
       >
         Add to Cart
       </Button>

@@ -2,6 +2,8 @@ import { HStack, Container, Spinner } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import Error from './Error';
 import ProductCard from './ProductCard';
+import toast from 'react-hot-toast';
+import { useDispatch } from 'react-redux';
 
 const Home = () => {
   const [storeData, SetStoreData] = useState([]);
@@ -24,13 +26,17 @@ const Home = () => {
     fetchStoreData();
   });
 
-    const Handler = options => {
-    };
+  const dispatch = useDispatch();
 
+  const addToCartHandler = options => {
+    dispatch({ type: 'addToCart', payload: options });
+    dispatch({ type: 'priceCalculation' });
+    toast.success('Added to Cart');
+  };
 
   if (error) return <Error />;
   return (
-    <Container maxW={'container.xl'} bgColor={''}>
+    <Container maxW={'container.xl'} bgColor={''} minH={'78vh'}>
       {loading ? (
         <div
           style={{
@@ -48,11 +54,12 @@ const Home = () => {
             {storeData.map(i => (
               <ProductCard
                 key={i.id}
+                id={i.id}
                 title={i.title}
                 description={i.description}
                 image={i.image}
                 price={i.price}
-                handler={Handler}
+                handler={addToCartHandler}
               />
             ))}
           </HStack>

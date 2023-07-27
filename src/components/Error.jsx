@@ -10,7 +10,7 @@ import {
 
 const Error = () => {
   return (
-    <Container minH={'100vh'} maxW={'container.xl'} p={'0'}>
+    <Container minH={'78vh'} maxW={'container.xl'} p={'0'}>
       <Stack
         spacing={3}
         bgColor={'#ff405c'}
