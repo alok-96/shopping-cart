@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Cart from './components/Cart';
 import { Toaster } from 'react-hot-toast';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
       </Routes>
       <Toaster />
+      <ScrollToTop />
       <Footer />
     </Router>
   );
