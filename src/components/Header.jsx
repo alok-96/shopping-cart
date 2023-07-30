@@ -12,22 +12,23 @@ const Header = () => {
   return (
     <HStack
       justifyContent={'space-between'}
-      bgColor={'#cccccc'}
+      bgColor={'#FAF0E4'}
       h={['8vh', '9vh', '9vh']}
       paddingInline={'15px'}
     >
       <Img src={logo} alt={'logo'} w={'50px'} />
       <HStack gap={['15px', '15px', '20px']} alignItems={'center'}>
-        <Link to={'/'} style={{ textDecoration: 'none' }} >
+        <Link to={'/'} style={{ textDecoration: 'none' }}>
           Home
         </Link>
         <Link to={'/cart'} style={{ textDecoration: 'none' }}>
           <AiOutlineShopping color="black" size={'35px'} />
           <Text
             w={'20px'}
-            bgColor={'white'}
+            bgColor={'#FF8551'}
             textAlign={'center'}
             borderRadius={'5px'}
+            color={'#ffffff'}
             position={'absolute'}
             right={'10px'}
             top={'35px'}

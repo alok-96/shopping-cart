@@ -50,7 +50,7 @@ const Home = () => {
         </div>
       ) : (
         <>
-          <HStack wrap={'wrap'} justifyContent={'space-evenly'}>
+          <HStack wrap={'wrap'} justifyContent={'space-evenly'} marginBlock={'30px'}>
             {storeData.map(i => (
               <ProductCard
                 key={i.id}

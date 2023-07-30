@@ -7,7 +7,6 @@ const ProductCard = ({ id, image, price, title, handler }) => {
       w={'300px'}
       h={'400px'}
       border={'1px solid #e0e0e0'}
-      borderRadius={'10px'}
       margin={'20px'}
       paddingBlock={'15px'}
       alignItems={'center'}
@@ -28,6 +27,8 @@ const ProductCard = ({ id, image, price, title, handler }) => {
       </Text>
       <Button
         colorScheme={'orange'}
+        bgColor={'#FF8551'}
+        borderRadius={'0px'}
         onClick={() => handler({ id, title, price, image, qty: 1 })}
       >
         Add to Cart

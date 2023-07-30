@@ -21,7 +21,6 @@ const CartItem = ({
       border={'1px solid #e0e0e0'}
       margin={'20px'}
       boxShadow={'lg'}
-      borderRadius={'10px'}
       padding={'20px'}
       grid={'1fr 2fr 1fr 1fr'}
     >
